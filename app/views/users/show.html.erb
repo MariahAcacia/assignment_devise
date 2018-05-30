@@ -1,0 +1,27 @@
+<p>
+  <strong>Username:</strong>
+  <%= current_user.username %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= current_user.first_name %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= current_user.last_name %>
+</p>
+
+
+<p>
+  <strong>Email:</strong>
+  <%= current_user.email %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_user_registration_path(current_user) %> |
+<%= link_to 'Back', user_path(current_user) %> |
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
